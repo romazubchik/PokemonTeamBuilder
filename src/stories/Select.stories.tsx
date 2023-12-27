@@ -11,11 +11,10 @@ export default {
 
 const Template: Story<SelectProps> = (args) => <SelectComponent {...args} />;
 
-// Default история
 export const Default: Story<SelectProps> = Template.bind({});
 Default.args = {
-  register: () => {}, // Потрібно передати mock-функцію для register
-  setValue: () => {}, // Потрібно передати mock-функцію для setValue
+  register: () => {}, 
+  setValue: () => {}, 
   onSelect: async (data) => {
     console.log('Selected data:', data);
   },
@@ -24,8 +23,8 @@ Default.args = {
 // AnotherStory история
 export const AnotherStory: Story<SelectProps> = Template.bind({});
 AnotherStory.args = {
-  register: () => {}, // Потрібно передати mock-функцію для register
-  setValue: () => {}, // Потрібно передати mock-функцію для setValue
+  register: () => {},
+  setValue: () => {},
   onSelect: async (data) => {
     console.log('Selected data:', data);
   },

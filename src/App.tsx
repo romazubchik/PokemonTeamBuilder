@@ -1,7 +1,7 @@
 // App.tsx
 import React, { useState } from 'react';
 import Select from './components/Select';
-import { useForm, SubmitHandler, UseFormRegister } from 'react-hook-form';
+import { useForm, SubmitHandler} from 'react-hook-form';
 import { Pokemon, getPokemonDetails, PokemonDetailsResponse } from './services/pokeApi';
 import Modal from 'react-modal';
 
@@ -20,7 +20,6 @@ function App() {
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     if (data.pokemon.length !== 4) {
-      // Встановлюємо помилку для поля pokemon, яка буде показана в SelectComponent
       setValue('pokemon', [], { shouldValidate: true });
       return;
     }
